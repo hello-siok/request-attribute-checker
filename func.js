@@ -314,26 +314,26 @@ function displayResult(data) {
                 
             case "content.qagrating":
                 try{
-                    presence = data["request"]["content"]["qagrating"];
+                    presence = data["request"]["app"]["content"]["qagrating"];
                     return presence !== undefined ? ["Y",presence] : ["N",""];
                 }catch{return ["N",''];}
 
             case "content.rating":
                 try{
-                    presence = data["request"]["content"]["userrating"];
+                    presence = data["request"]["app"]["content"]["userrating"];
                     return presence !== undefined ? ["Y",presence] : ["N",""];
                 }catch{return ["N",''];}
                 
             
             case "content.length":
                 try{
-                    presence = data["request"]["content"]["len"];
+                    presence = data["request"]["app"]["content"]["len"];
                     return presence !== undefined ? ["Y",presence] : ["N",""];
                 }catch{return ["N",''];}
                 
             case "content.producer.name":
                 try{
-                    presence = data["request"]["content"]["producer"]["name"];
+                    presence = data["request"]["app"]["content"]["producer"]["name"];
                     return presence !== undefined ? ["Y",presence] : ["N",""];
                 }catch{return ["N",''];}
             
@@ -487,3 +487,5 @@ function displayResult(data) {
         
     }
 }
+
+
