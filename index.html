@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad request attribute check</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="left">
+        <ul>
+            <li id="title">General</li>
+            <li><input type="checkbox" id="myCheckbox" checked>imp.tagid</li>
+            <li><input type="checkbox" id="myCheckbox" checked>imp.bidfloor</li>
+            <li><input type="checkbox" id="myCheckbox" checked>imp.bidfloorcur</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>site.cat</li>
+            <li><input type="checkbox" id="myCheckbox" checked>site.domain</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>app.cat</li>
+            <li><input type="checkbox" id="myCheckbox" checked>app.package_name</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>device.ifa</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.ua</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.dnt</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.lmt</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.ip</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.mccmnc</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.type</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.model</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.os</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.connectiontype</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.w</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.h</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.language</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.js</li>
+            <li><input type="checkbox" id="myCheckbox" checked>device.devicetype</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>geo.country</li>
+            <li><input type="checkbox" id="myCheckbox" checked>geo.lat</li>
+            <li><input type="checkbox" id="myCheckbox" checked>geo.lon</li>
+            <li><input type="checkbox" id="myCheckbox" checked>geo.ipservice</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>tmax</li>
+            <li><input type="checkbox" id="myCheckbox">bcat</li>
+            <li><input type="checkbox" id="myCheckbox">badv</li>
+            
+            <li><input type="checkbox" id="myCheckbox" checked>source.pchain</li>
+            <li><input type="checkbox" id="myCheckbox" checked>source.omidpn</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>regs.gdpr</li>
+            <li><input type="checkbox" id="myCheckbox" checked>regs.coppa</li>
+            <li><input type="checkbox" id="myCheckbox" checked>ext.us_privacy</li>
+
+            <li><input type="checkbox" id="myCheckbox" checked>publisher.name</li>
+            <li><input type="checkbox" id="myCheckbox" checked>user.consent</li>
+            <li><input type="checkbox" id="myCheckbox" checked>user.ext.eids</li>
+            
+            <li><input type="checkbox" id="myCheckbox">content.qagrating</li>
+            <li><input type="checkbox" id="myCheckbox">content.rating</li>
+            <li><input type="checkbox" id="myCheckbox">content.length</li>
+            <li><input type="checkbox" id="myCheckbox">content.producer.name</li>
+
+            <li><input type="checkbox" id="myCheckbox">metric</li>
+
+            <li id="title">Video</li>
+            <li><input type="checkbox" id="myCheckbox" checked>maxbitrate</li>
+            <li><input type="checkbox" id="myCheckbox" checked>protocols</li>
+            <li><input type="checkbox" id="myCheckbox" checked>mimes</li>
+            <li><input type="checkbox" id="myCheckbox" checked>maxduration</li>
+            <li><input type="checkbox" id="myCheckbox" checked>playbackmethod</li>
+            <li><input type="checkbox" id="myCheckbox" checked>placement</li>
+            <li><input type="checkbox" id="myCheckbox" checked>linearity</li>
+            <li><input type="checkbox" id="myCheckbox">skip</li>
+            <li><input type="checkbox" id="myCheckbox">skipafter</li>
+            <li><input type="checkbox" id="myCheckbox">playbackend</li>
+            <li><input type="checkbox" id="myCheckbox">min duration</li>
+    
+            <li id="title">Banner</li>
+            <li><input type="checkbox" id="myCheckbox" checked>imp.ext</li>
+            <li><input type="checkbox" id="myCheckbox" checked>exp</li>
+            <li><input type="checkbox" id="myCheckbox" checked>mimes</li>
+            <li><input type="checkbox" id="myCheckbox" checked>topframe</li>
+            <li><input type="checkbox" id="myCheckbox" checked>pos</li>
+            <li><input type="checkbox" id="myCheckbox" checked>api</li>
+
+            <li id="title">Native</li>
+            <li><input type="checkbox" id="myCheckbox" checked>native.privacy</li>
+            <li><input type="checkbox" id="myCheckbox" checked>plcmttype</li>
+            <li><input type="checkbox" id="myCheckbox" checked>native.eventtrackers</li>
+            <li><input type="checkbox" id="myCheckbox" checked>context</li>
+
+            <li id="title">CTV</li>
+            <li><input type="checkbox" id="myCheckbox" checked>app.content.series</li>
+            <li><input type="checkbox" id="myCheckbox" checked>app.content.len</li>
+
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Request Attribute Check</h1>
+        <section>
+            <div>
+                <label for="jsonInput">Paste Request:</label>
+            </div>
+            <div><input type="text" id="jsonInput"></div>
+            <div><button onclick="readInputAsJSON()" class="btn btn-dark">Check Attributes</button></div>
+
+            <div>
+                <div id="meta-info"></div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Attribute</th>
+                        <th scope="col">Required/Optional</th>
+                        <th scope="col">Present (Y/N)</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody id="result">
+
+                    </tbody>
+                    <!--
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                    -->
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="func.js"> </script>
+</body>
+</html>
