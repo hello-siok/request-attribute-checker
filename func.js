@@ -117,6 +117,12 @@ function displayResult(data) {
                     return presence !== undefined ? ["Y",presence] : ["N",""];
                 }catch{return ["N",''];}
 
+            case "app.domain":
+                try{
+                    presence = data["request"]["app"]["domain"];
+                    return presence !== undefined ? ["Y",presence] : ["N",""];
+                }catch{return ["N",''];}
+
             case "device.mccmnc":
                 try{    
                     presence = data["request"]["device"]["mccmnc"];
