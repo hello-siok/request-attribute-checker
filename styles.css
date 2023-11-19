@@ -6,7 +6,7 @@ body {
 }
 
 .left {
-    background-color: #f0f0f0;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     position: fixed;
     width: 20vw; /* Adjust the width as needed */
     height: 100vh;
@@ -33,6 +33,10 @@ li {
     padding:0;
 }
 
+input {
+    padding-right: 10px;
+}
+
 li:hover {
     font-weight: 500;
 }
@@ -43,10 +47,43 @@ li:hover {
 
 #jsonInput {
     width: 70vw;
-    height: 150px;
+    height: 100px;
 }
 
 #title {
     font-weight: 600;
+    font-size: 1.2em;
+    padding-top: 10px;
 }
 
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#meta-info {
+    height: 30px;
+}
+
+table {
+    width: 70vw;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td, th {
+    word-wrap: break-word; 
+}
+
+table th:nth-child(6),
+table td:nth-child(6) {
+  width: 60%; 
+}
+
+table th:nth-child(4),
+table td:nth-child(4),
+table th:nth-child(5),
+table td:nth-child(5) {
+  width: 8%; 
+}
