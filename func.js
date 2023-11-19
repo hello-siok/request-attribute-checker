@@ -25,7 +25,11 @@ function displayResult(data) {
     } else if (data["request"]["imp"][0]["audio"] !== undefined){
         format = "Audio";
     }
-    metaElement.innerHTML = `format = ${format}`;
+    metaElement.innerHTML = `<span class="badge bg-secondary">format = ${format} </span> `;
+
+    // declare parameter to calculate score
+    countRequired = 0;
+    countRequiredPresence = 0;
 
     //update table section
     table.innerHTML = "";
@@ -55,9 +59,8 @@ function displayResult(data) {
             color = "table-success";
         }
 
-        if(required == "Y" || presence == "Y"){
+        if((required == "Y" || presence == "Y") && (catStatus == format || catStatus == "General")){
             table.innerHTML += `<tr class="${color}">
-                <td>${catStatus}</td>
                 <td>${parent}</td>
                 <td>${attribute}</td>
                 <td>${required}</td>
@@ -65,6 +68,18 @@ function displayResult(data) {
                 <td>${typeof(value) === 'object' ? JSON.stringify(value): value}</td>
                 </tr>`;
         }
+
+        //calculate completion score
+        if(required == "Y" && (catStatus == format || catStatus == "General")){
+            countRequired += 1;
+            if (presence == "Y"){
+                countRequiredPresence += 1;
+            }
+        }
     }
+
+    score = countRequiredPresence/countRequired * 100;
+    score = score.toFixed(2);
+    metaElement.innerHTML += `<span class="badge bg-primary">Required Attribute Completion Score = ${score}%</span>`;
     
 }
