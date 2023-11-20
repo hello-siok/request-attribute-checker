@@ -16,6 +16,8 @@ function displayResult(data) {
 
     //update meta information - 1. ad format 2. web/app , os, country
     // 3. regs status (coppa, gdpr, ccpa)
+    // SKadnetwork
+    // video instream/outstream
     // 4. completion score
 
     /// 1. get format
@@ -35,7 +37,17 @@ function displayResult(data) {
     var os = data["request"]?.["device"]?.['os'] ?? "undefined";
     var country = data["request"]?.["device"]?.['geo']?.['country'] ?? "undefined";
 
-    metaElement.innerHTML = `<span class="badge bg-dark">Format = ${format}; Environment = ${websiteOrApp}; OS = ${os}; country= ${country}</span> `;
+    metaElement.innerHTML = `<span class="badge text-bg-light">Format = ${format}; Environment = ${websiteOrApp}; OS = ${os}; country= ${country}</span> `;
+
+    //video instream vs outstream
+    //instream - sound on vs outstream - sound off
+    if(format == "Video"){
+        var instreamOrOutstream = data["request"]["imp"][0]["video"]?.['placement'] == 1 ? "in-stream" : "out-stream";
+        var soundOn = [1,3,4,5].includes(data["request"]["imp"][0]["video"]?.['playbackmethod']?.[0]) ? "soundOn" : "soundOff";
+        var streamColor = ((instreamOrOutstream == "in-stream" && soundOn == "soundOn") || (instreamOrOutstream == "out-stream" && soundOn == "soundOff")) ? "success" : "danger";
+
+        metaElement.innerHTML += `<span class="badge bg-${streamColor}">[Video] ${instreamOrOutstream}, ${soundOn}</span> `;
+    }
 
     /// schain
     var schainComplete = data["request"]?.["source"]?.["ext"]?.["schain"]?.["complete"] ?? "no schain";
@@ -65,7 +77,7 @@ function displayResult(data) {
         // 2.6 - User.consent | 2.5 below - User.ext.consent
         var gdprConsentString = data['request']?.['user']?.['ext']?.['consent'] ?? (data['request']?.['user']?.['consent'] ?? "");
 
-        metaElement.innerHTML += `<span class="badge bg-warning">GDPR applicable = ${gdprApplicable}; GDPR consent string = ${gdprConsentString}</span> `;
+        metaElement.innerHTML += `<span class="badge text-bg-light">GDPR applicable = ${gdprApplicable}; GDPR consent string = ${gdprConsentString}</span> `;
     }
 
     //SKAN
@@ -91,6 +103,8 @@ function displayResult(data) {
         required  = row["Required"] == 1 ? "Y" : "N";
         value     = row["location"];
         presence  = (value === "") ? "N" : "Y";
+        recommendedValue = row["RecommendedValue"];
+        missingValue = "";
 
         // add to table if either: 
         // (1) required (regardless of whether there is value); 
@@ -115,6 +129,14 @@ function displayResult(data) {
             color = "table-success";
         }
 
+        //check missing recommended value
+        if (recommendedValue != ""){
+            if(Array.isArray(value)){
+                missingValue = recommendedValue.filter(item => !value.includes(item));
+            }
+        }
+
+        //
         if((required == "Y" || presence == "Y") && (catStatus == format || catStatus == "General") && (parent != doNotAddCounterpart)){
             table.innerHTML += `<tr class="${color}">
                 <td>${parent}</td>
@@ -122,6 +144,7 @@ function displayResult(data) {
                 <td>${required}</td>
                 <td>${presence}</td>
                 <td>${typeof(value) === 'object' ? JSON.stringify(value): value}</td>
+                <td>${missingValue}</td>
                 </tr>`;
         }
 

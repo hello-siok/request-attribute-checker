@@ -5,10 +5,14 @@ body {
 
 }
 
+h2 {
+    text-align: center; 
+}
+
 .left {
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     position: fixed;
-    width: 20vw; /* Adjust the width as needed */
+    width: 15vw; /* Adjust the width as needed */
     height: 100vh;
     padding: 20px;
     border: 1px solid #ccc;
@@ -18,12 +22,17 @@ body {
 
 main {
     padding: 20px;
-    margin-left: 20vw;
+    margin-left: 15vw;
     width: 80vw;
 }
 
 main div {
     padding-bottom: 5px;
+}
+
+button {
+    margin-right: 30px;
+    cursor: pointer;
 }
 
 li {
@@ -46,9 +55,10 @@ li:hover {
 }
 
 #jsonInput {
-    width: 70vw;
-    height: 100px;
+    width: 80vw;
+    height: 80px;
 }
+
 
 #title {
     font-weight: 600;
@@ -63,13 +73,15 @@ thead th {
 }
 
 #meta-info {
-    height: 60px;
+    height: 80px;
+    
 }
 
 table {
-    width: 70vw;
+    width: 75vw;
     border-collapse: collapse;
     table-layout: fixed;
+    font-size: 0.8em;
 }
 
 td, th {
@@ -78,12 +90,16 @@ td, th {
 
 table th:nth-child(5),
 table td:nth-child(5) {
-  width: 55%; 
+  width: 50%; 
+}
+table th:nth-child(6),
+table td:nth-child(6) {
+  width: 15%; 
 }
 
 table th:nth-child(3),
 table td:nth-child(3),
 table th:nth-child(4),
 table td:nth-child(4) {
-  width: 8%; 
+  width: 6%; 
 }

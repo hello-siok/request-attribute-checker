@@ -19,36 +19,38 @@
     </header>
 
     <main>
-        <h1>Request Attribute Check</h1>
+        <h2>Request Attribute Check</h1>
         <section>
             <div>
                 <label for="jsonInput">⬇️ Paste Request Here ⬇️</label>
             </div>
             <div><input type="text" id="jsonInput"></div>
-            <div><button onclick="readInputAsJSON()" class="btn btn-dark">Check Attributes</button>
+            <div>
+                <button onclick="readInputAsJSON()" class="btn btn-warning btn-sm">Check Attributes</button>
 
-            <button type="button" class="btn btn-info" id="exportXlsxButton">
-                Download Excel (.xlsx)
-            </button>
+                <button type="button" class="btn btn-outline-dark btn-sm" id="exportXlsxButton">
+                    Download Excel (.xlsx)
+                </button>
 
-            <button type="button" class="btn btn-info" id="exportXlsButton">
-                Download Excel (.xls)
-            </button>
+                <button type="button" class="btn btn-outline-dark btn-sm" id="exportXlsButton">
+                    Download Excel (.xls)
+                </button>
             </div>
 
             <div>
                 <div id="meta-info"></div>
-                <table class="table table-hover table-borderless">
+                <table class="table table-hover table-sm table-bordered">
                     <thead>
-                      <tr class="table-secondary">
+                      <tr class="table-secondary align-top table-group-divider">
                         <th scope="col">Object</th>
                         <th scope="col">Attribute</th>
                         <th scope="col">Required (Y/N)</th>
                         <th scope="col">Present (Y/N)</th>
                         <th scope="col">Attribute Value</th>
+                        <th scope="col">Check Recommended Value</th>
                       </tr>
                     </thead>
-                    <tbody id="result">
+                    <tbody id="result" class="table-group-divider">
 
                     </tbody>
                 </table>

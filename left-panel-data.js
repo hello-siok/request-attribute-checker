@@ -909,7 +909,7 @@ function getJason(data){
       "Visibility": 1,
       "id": "video-mimes",
       "location": data['request']?.['imp'][0]?.['video']?.['mimes'] ?? '',
-      "RecommendedValue": ""
+      "RecommendedValue": ["video/mp4","application/x-mpegurl","video/3gpp","video/x-flv"]
     },
     {
       "parent": "Video",
@@ -936,7 +936,7 @@ function getJason(data){
       "Visibility": 0,
       "id": "video-protocol",
       "location": data['request']?.['imp'][0]?.['video']?.['protocol'] ?? '',
-      "RecommendedValue": ""
+      "RecommendedValue": [2,3,5,6]
     },
     {
       "parent": "Video",
@@ -945,7 +945,7 @@ function getJason(data){
       "Visibility": 1,
       "id": "video-protocols",
       "location": data['request']?.['imp'][0]?.['video']?.['protocols'] ?? '',
-      "RecommendedValue": ""
+      "RecommendedValue": [2,3,5,6]
     },
     {
       "parent": "Video",
@@ -1125,7 +1125,7 @@ function getJason(data){
       "Visibility": 0,
       "id": "video-api",
       "location": data['request']?.['imp'][0]?.['video']?.['api'] ?? '',
-      "RecommendedValue": ""
+      "RecommendedValue": [3,5,6,7]
     },
     {
       "parent": "Video",
