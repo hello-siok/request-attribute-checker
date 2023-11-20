@@ -82,7 +82,7 @@ function displayResult(data) {
 
     //SKAN
     if (os == "iOS"){
-        var skanIdLen = data['request']?.['imp']?.['ext']?.['skadn']?.["skadnetids"] ?? [];
+        var skanIdLen = data['request']?.['imp'][0]?.['ext']?.['skadn']?.["skadnetids"] ?? [];
         skanIdLen = skanIdLen.length;
         var skColor = (skanIdLen > 0) ? "success" : "danger";
 
