@@ -96,11 +96,14 @@ function displayResult(data) {
     //update table section
     table.innerHTML = "";
 
+    console.log(JSON.parse(data['request']?.['imp'][0]?.['native']?.['request']??"")?.["eventtrackers"]);
+
     jason = getJason(data);
     for(row of jason){
-        parent    = row["parent"]
-        attribute = row["attribute"]
-        required  = row["Required"] == 1 ? "Y" : "N";
+        parent    = row["parent"];
+        attribute = row["attribute"];
+        className = row["id"];
+        required  = document.getElementsByClassName(className)[0].checked ? "Y":"N";
         value     = row["location"];
         presence  = (value === "") ? "N" : "Y";
         recommendedValue = row["RecommendedValue"];

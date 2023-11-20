@@ -1304,7 +1304,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-privacy",
-      "location": data['request']?.['imp'][0]?.['native']?.['request']?.['native']?.['privacy'] ?? '',
+      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['privacy'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1313,7 +1313,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-plcmttype",
-      "location": data['request']?.['imp'][0]?.['native']?.['request']?.['native']?.['plcmttype'] ?? '',
+      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['plcmttype'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1322,7 +1322,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-eventtrackers",
-      "location": data['request']?.['imp'][0]?.['native']?.['request']?.['native']?.['eventtrackers'] ?? '',
+      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['eventtrackers'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1331,7 +1331,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-context",
-      "location": data['request']?.['imp'][0]?.['native']?.['request']?.['native']?.['context'] ?? '',
+      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['context'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
