@@ -599,7 +599,7 @@ function getJason(data){
     {
       "parent": "Device",
       "attribute": "hwv",
-      "Required": 0,
+      "Required": 1,
       "Visibility": 1,
       "id": "device-hwv",
       "location": data['request']?.['device']?.['hwv'] ?? '',
@@ -1709,7 +1709,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "regs-us_privacy",
-      "location": data['request']?.['regs']?.['ext']?.['us_privacy (only for US traffic)'] ?? '',
+      "location": data['request']?.['regs']?.['ext']?.['us_privacy'] ?? '',
       "RecommendedValue": ""
     },
     {
