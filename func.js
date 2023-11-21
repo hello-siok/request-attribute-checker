@@ -96,8 +96,6 @@ function displayResult(data) {
     //update table section
     table.innerHTML = "";
 
-    console.log(JSON.parse(data['request']?.['imp'][0]?.['native']?.['request']??"")?.["eventtrackers"]);
-
     jason = getJason(data);
     for(row of jason){
         parent    = row["parent"];
@@ -139,7 +137,7 @@ function displayResult(data) {
             }
         }
 
-        //
+        // add to table
         if((required == "Y" || presence == "Y") && (catStatus == format || catStatus == "General") && (parent != doNotAddCounterpart)){
             table.innerHTML += `<tr class="${color}">
                 <td>${parent}</td>
