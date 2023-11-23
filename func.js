@@ -20,51 +20,60 @@ function displayResult(data) {
     // video instream/outstream
     // 4. completion score
 
+    // 23 Nov - fix error data["request"] vs data 
+    if (data["request"] !== undefined){
+        data = data["request"];
+    }
+
+    if((data["imp"] && data["imp"].length > 0) ){
+        imp = data["imp"][0];
+    }
+
     /// 1. get format
     format = "";
-    if (data["request"]["imp"][0]["video"] !== undefined){
+    if (imp["video"] !== undefined){
         format = "Video";
-    } else if (data["request"]["imp"][0]["banner"] !== undefined){
+    } else if (imp["banner"] !== undefined){
         format = "Banner";
-    } else if (data["request"]["imp"][0]["native"] !== undefined){
+    } else if (imp["native"] !== undefined){
         format = "Native";
-    } else if (data["request"]["imp"][0]["audio"] !== undefined){
+    } else if (imp["audio"] !== undefined){
         format = "Audio";
     }
 
     /// 2. website or app
-    var websiteOrApp = (data["request"]["app"] !== undefined)? "app" : "website";
-    var os = data["request"]?.["device"]?.['os'] ?? "undefined";
-    var country = data["request"]?.["device"]?.['geo']?.['country'] ?? "undefined";
+    var websiteOrApp = (data["app"] !== undefined)? "app" : "website";
+    var os = data?.["device"]?.['os'] ?? "undefined";
+    var country = data?.["device"]?.['geo']?.['country'] ?? "undefined";
 
     metaElement.innerHTML = `<span class="badge text-bg-light">Format = ${format}; Environment = ${websiteOrApp}; OS = ${os}; country= ${country}</span> `;
 
     //video instream vs outstream
     //instream - sound on vs outstream - sound off
     if(format == "Video"){
-        var instreamOrOutstream = data["request"]["imp"][0]["video"]?.['placement'] == 1 ? "in-stream" : "out-stream";
-        var soundOn = [1,3,4,5].includes(data["request"]["imp"][0]["video"]?.['playbackmethod']?.[0]) ? "soundOn" : "soundOff";
+        var instreamOrOutstream = imp["video"]?.['placement'] == 1 ? "in-stream" : "out-stream";
+        var soundOn = [1,3,4,5].includes(imp["video"]?.['playbackmethod']?.[0]) ? "soundOn" : "soundOff";
         var streamColor = ((instreamOrOutstream == "in-stream" && soundOn == "soundOn") || (instreamOrOutstream == "out-stream" && soundOn == "soundOff")) ? "success" : "danger";
 
         metaElement.innerHTML += `<span class="badge bg-${streamColor}">[Video] ${instreamOrOutstream}, ${soundOn}</span> `;
     }
 
     /// schain
-    var schainComplete = data["request"]?.["source"]?.["ext"]?.["schain"]?.["complete"] ?? "no schain";
-    var schainLength = data["request"]?.["source"]?.["ext"]?.["schain"]?.["nodes"] ?? [];
+    var schainComplete = data?.["source"]?.["ext"]?.["schain"]?.["complete"] ?? "no schain";
+    var schainLength = data?.["source"]?.["ext"]?.["schain"]?.["nodes"] ?? [];
     schainLength = schainLength.length;
     var schainColor = (schainLength <= 2) ? "success":"danger";
 
     metaElement.innerHTML += `<span class="badge bg-${schainColor}">[schain] complete = ${schainComplete}; length = ${schainLength}</span> `;
 
     /// regs
-    var coppa = data["request"]?.["regs"]?.['coppa'] ?? 0;
+    var coppa = data?.["regs"]?.['coppa'] ?? 0;
     var coppaColor = (coppa == 0) ? "success" : "danger";
     metaElement.innerHTML += `<span class="badge bg-${coppaColor}">COPPA = ${coppa}</span> `;
 
     //// CCPA
     if (country == "USA"){
-        var ccpa = data["request"]?.["regs"]?.['ext']?.['us_privacy'] ?? "no CCPA string found";
+        var ccpa = data?.["regs"]?.['ext']?.['us_privacy'] ?? "no CCPA string found";
 
         metaElement.innerHTML += `<span class="badge bg-warning">CCPA = ${ccpa}</span> `;
     }
@@ -96,7 +105,7 @@ function displayResult(data) {
     //update table section
     table.innerHTML = "";
 
-    jason = getJason(data);
+    jason = getJason(data, imp);
     for(row of jason){
         parent    = row["parent"];
         attribute = row["attribute"];

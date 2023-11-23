@@ -1,6 +1,6 @@
 //var data = data || {};
 
-function getJason(data){
+function getJason(data, imp){
   var jason = [
     {
       "parent": "BidRequest",
@@ -8,7 +8,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "tmax",
-      "location": data['request']?.['tmax'] ?? '',
+      "location": data?.['tmax'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -17,7 +17,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "bcat",
-      "location": data['request']?.['bcat'] ?? '',
+      "location": data?.['bcat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -26,7 +26,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "badv",
-      "location": data['request']?.['badv'] ?? '',
+      "location": data?.['badv'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -35,7 +35,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "bapp",
-      "location": data['request']?.['bapp'] ?? '',
+      "location": data?.['bapp'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -44,7 +44,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "wlang",
-      "location": data['request']?.['wlang'] ?? '',
+      "location": data?.['wlang'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -53,7 +53,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "wlangb",
-      "location": data['request']?.['wlangb'] ?? '',
+      "location": data?.['wlangb'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -62,7 +62,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "wseat",
-      "location": data['request']?.['wseat '] ?? '',
+      "location": data?.['wseat '] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -71,7 +71,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "bseat",
-      "location": data['request']?.['bseat'] ?? '',
+      "location": data?.['bseat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -80,7 +80,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "cur",
-      "location": data['request']?.['cur'] ?? '',
+      "location": data?.['cur'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -89,7 +89,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "ext",
-      "location": data['request']?.['ext'] ?? '',
+      "location": data?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -98,7 +98,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "cattax",
-      "location": data['request']?.['cattax'] ?? '',
+      "location": data?.['cattax'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -107,7 +107,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "tagid",
-      "location": data['request']?.['imp'][0]?.['tagid'] ?? '',
+      "location": imp?.['tagid'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -116,7 +116,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "bidfloor",
-      "location": data['request']?.['imp'][0]?.['bidfloor'] ?? '',
+      "location": imp?.['bidfloor'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -125,7 +125,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "bidfloorcur",
-      "location": data['request']?.['imp'][0]?.['bidfloorcur'] ?? '',
+      "location": imp?.['bidfloorcur'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -134,7 +134,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "metric",
-      "location": data['request']?.['imp'][0]?.['metric'] ?? '',
+      "location": imp?.['metric'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -143,7 +143,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "pmp",
-      "location": data['request']?.['imp'][0]?.['pmp'] ?? '',
+      "location": imp?.['pmp'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -152,7 +152,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "displaymanager",
-      "location": data['request']?.['imp'][0]?.['displaymanager'] ?? '',
+      "location": imp?.['displaymanager'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -161,7 +161,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "displaymanagerver",
-      "location": data['request']?.['imp'][0]?.['displaymanagerver'] ?? '',
+      "location": imp?.['displaymanagerver'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -170,7 +170,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "instl",
-      "location": data['request']?.['imp'][0]?.['instl'] ?? '',
+      "location": imp?.['instl'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -179,7 +179,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "clickbrowser",
-      "location": data['request']?.['imp'][0]?.['clickbrowser'] ?? '',
+      "location": imp?.['clickbrowser'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -188,7 +188,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "secure",
-      "location": data['request']?.['imp'][0]?.['secure'] ?? '',
+      "location": imp?.['secure'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -197,7 +197,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "iframebuster",
-      "location": data['request']?.['imp'][0]?.['iframebuster'] ?? '',
+      "location": imp?.['iframebuster'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -206,7 +206,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "exp",
-      "location": data['request']?.['imp'][0]?.['exp'] ?? '',
+      "location": imp?.['exp'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -215,7 +215,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "ext",
-      "location": data['request']?.['imp'][0]?.['ext'] ?? '',
+      "location": imp?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -224,7 +224,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "site-cat",
-      "location": data['request']?.['site']?.['cat'] ?? '',
+      "location": data?.['site']?.['cat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -233,7 +233,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "site-domain",
-      "location": data['request']?.['site']?.['domain'] ?? '',
+      "location": data?.['site']?.['domain'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -242,7 +242,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-name",
-      "location": data['request']?.['site']?.['name'] ?? '',
+      "location": data?.['site']?.['name'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -251,7 +251,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-sectioncat",
-      "location": data['request']?.['site']?.['sectioncat'] ?? '',
+      "location": data?.['site']?.['sectioncat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -260,7 +260,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-pagecat",
-      "location": data['request']?.['site']?.['pagecat'] ?? '',
+      "location": data?.['site']?.['pagecat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -269,7 +269,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-page",
-      "location": data['request']?.['site']?.['page'] ?? '',
+      "location": data?.['site']?.['page'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -278,7 +278,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-ref",
-      "location": data['request']?.['site']?.['ref'] ?? '',
+      "location": data?.['site']?.['ref'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -287,7 +287,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-search",
-      "location": data['request']?.['site']?.['search'] ?? '',
+      "location": data?.['site']?.['search'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -296,7 +296,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-mobile",
-      "location": data['request']?.['site']?.['mobile'] ?? '',
+      "location": data?.['site']?.['mobile'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -305,7 +305,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-privacypolicy",
-      "location": data['request']?.['site']?.['privacypolicy'] ?? '',
+      "location": data?.['site']?.['privacypolicy'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -314,7 +314,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-publisher",
-      "location": data['request']?.['site']?.['publisher'] ?? '',
+      "location": data?.['site']?.['publisher'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -323,7 +323,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-keywords",
-      "location": data['request']?.['site']?.['keywords'] ?? '',
+      "location": data?.['site']?.['keywords'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -332,7 +332,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "site-ext",
-      "location": data['request']?.['site']?.['ext'] ?? '',
+      "location": data?.['site']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -341,7 +341,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "app-cat",
-      "location": data['request']?.['app']?.['cat'] ?? '',
+      "location": data?.['app']?.['cat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -350,7 +350,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "app-domain",
-      "location": data['request']?.['app']?.['domain'] ?? '',
+      "location": data?.['app']?.['domain'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -359,7 +359,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "app-storeurl",
-      "location": data['request']?.['app']?.['storeurl'] ?? '',
+      "location": data?.['app']?.['storeurl'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -368,7 +368,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "app-ver",
-      "location": data['request']?.['app']?.['ver'] ?? '',
+      "location": data?.['app']?.['ver'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -377,7 +377,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "app-bundle",
-      "location": data['request']?.['app']?.['bundle'] ?? '',
+      "location": data?.['app']?.['bundle'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -386,7 +386,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "app-kwarray",
-      "location": data['request']?.['app']?.['kwarray'] ?? '',
+      "location": data?.['app']?.['kwarray'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -395,7 +395,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "app-cattax",
-      "location": data['request']?.['app']?.['cattax'] ?? '',
+      "location": data?.['app']?.['cattax'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -404,7 +404,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "app-ext",
-      "location": data['request']?.['app']?.['ext'] ?? '',
+      "location": data?.['app']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -413,7 +413,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-name",
-      "location": data['request']?.['app']?.['name'] ?? '',
+      "location": data?.['app']?.['name'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -422,7 +422,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-sectioncat",
-      "location": data['request']?.['app']?.['sectioncat'] ?? '',
+      "location": data?.['app']?.['sectioncat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -431,7 +431,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-pagecat",
-      "location": data['request']?.['app']?.['pagecat'] ?? '',
+      "location": data?.['app']?.['pagecat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -440,7 +440,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-privacypolicy",
-      "location": data['request']?.['app']?.['privacypolicy'] ?? '',
+      "location": data?.['app']?.['privacypolicy'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -449,7 +449,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-paid",
-      "location": data['request']?.['app']?.['paid'] ?? '',
+      "location": data?.['app']?.['paid'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -458,7 +458,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-publisher",
-      "location": data['request']?.['app']?.['publisher'] ?? '',
+      "location": data?.['app']?.['publisher'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -467,7 +467,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-keywords",
-      "location": data['request']?.['app']?.['keywords'] ?? '',
+      "location": data?.['app']?.['keywords'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -476,7 +476,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "app-ext",
-      "location": data['request']?.['app']?.['ext'] ?? '',
+      "location": data?.['app']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -485,7 +485,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-ifa",
-      "location": data['request']?.['device']?.['ifa'] ?? '',
+      "location": data?.['device']?.['ifa'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -494,7 +494,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-ua",
-      "location": data['request']?.['device']?.['ua'] ?? '',
+      "location": data?.['device']?.['ua'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -503,7 +503,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-sua",
-      "location": data['request']?.['device']?.['sua'] ?? '',
+      "location": data?.['device']?.['sua'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -512,7 +512,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-dnt",
-      "location": data['request']?.['device']?.['dnt'] ?? '',
+      "location": data?.['device']?.['dnt'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -521,7 +521,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-lmt",
-      "location": data['request']?.['device']?.['lmt'] ?? '',
+      "location": data?.['device']?.['lmt'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -530,7 +530,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-ip",
-      "location": data['request']?.['device']?.['ip'] ?? '',
+      "location": data?.['device']?.['ip'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -539,7 +539,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "device-ipv6",
-      "location": data['request']?.['device']?.['ipv6'] ?? '',
+      "location": data?.['device']?.['ipv6'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -548,7 +548,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-mccmnc",
-      "location": data['request']?.['device']?.['mccmnc'] ?? '',
+      "location": data?.['device']?.['mccmnc'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -557,7 +557,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-type",
-      "location": data['request']?.['device']?.['type'] ?? '',
+      "location": data?.['device']?.['type'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -566,7 +566,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-model",
-      "location": data['request']?.['device']?.['model'] ?? '',
+      "location": data?.['device']?.['model'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -575,7 +575,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-make",
-      "location": data['request']?.['device']?.['make'] ?? '',
+      "location": data?.['device']?.['make'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -584,7 +584,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-os",
-      "location": data['request']?.['device']?.['os'] ?? '',
+      "location": data?.['device']?.['os'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -593,7 +593,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-osv",
-      "location": data['request']?.['device']?.['osv'] ?? '',
+      "location": data?.['device']?.['osv'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -602,7 +602,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-hwv",
-      "location": data['request']?.['device']?.['hwv'] ?? '',
+      "location": data?.['device']?.['hwv'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -611,7 +611,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-connectiontype",
-      "location": data['request']?.['device']?.['connectiontype'] ?? '',
+      "location": data?.['device']?.['connectiontype'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -620,7 +620,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-w",
-      "location": data['request']?.['device']?.['w'] ?? '',
+      "location": data?.['device']?.['w'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -629,7 +629,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-h",
-      "location": data['request']?.['device']?.['h'] ?? '',
+      "location": data?.['device']?.['h'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -638,7 +638,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-language",
-      "location": data['request']?.['device']?.['language'] ?? '',
+      "location": data?.['device']?.['language'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -647,7 +647,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-langb",
-      "location": data['request']?.['device']?.['langb'] ?? '',
+      "location": data?.['device']?.['langb'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -656,7 +656,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-js",
-      "location": data['request']?.['device']?.['js'] ?? '',
+      "location": data?.['device']?.['js'] ?? '',
       "RecommendedValue": 1
     },
     {
@@ -665,7 +665,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "device-devicetype",
-      "location": data['request']?.['device']?.['devicetype'] ?? '',
+      "location": data?.['device']?.['devicetype'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -674,7 +674,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-didsha1",
-      "location": data['request']?.['device']?.['didsha1'] ?? '',
+      "location": data?.['device']?.['didsha1'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -683,7 +683,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-didmd5",
-      "location": data['request']?.['device']?.['didmd5'] ?? '',
+      "location": data?.['device']?.['didmd5'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -692,7 +692,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-dpidsha1",
-      "location": data['request']?.['device']?.['dpidsha1'] ?? '',
+      "location": data?.['device']?.['dpidsha1'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -701,7 +701,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-dpidmd5",
-      "location": data['request']?.['device']?.['dpidmd5'] ?? '',
+      "location": data?.['device']?.['dpidmd5'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -710,7 +710,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-macsha1",
-      "location": data['request']?.['device']?.['macsha1'] ?? '',
+      "location": data?.['device']?.['macsha1'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -719,7 +719,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-macmd5",
-      "location": data['request']?.['device']?.['macmd5'] ?? '',
+      "location": data?.['device']?.['macmd5'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -728,7 +728,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "device-ext",
-      "location": data['request']?.['device']?.['ext'] ?? '',
+      "location": data?.['device']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -737,7 +737,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "device-ppi",
-      "location": data['request']?.['device']?.['ppi'] ?? '',
+      "location": data?.['device']?.['ppi'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -746,7 +746,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "device-pxratio",
-      "location": data['request']?.['device']?.['pxratio'] ?? '',
+      "location": data?.['device']?.['pxratio'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -755,7 +755,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "device-geofetch",
-      "location": data['request']?.['device']?.['geofetch'] ?? '',
+      "location": data?.['device']?.['geofetch'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -764,7 +764,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "device-flashver",
-      "location": data['request']?.['device']?.['flashver'] ?? '',
+      "location": data?.['device']?.['flashver'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -773,7 +773,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "device-carrier",
-      "location": data['request']?.['device']?.['carrier'] ?? '',
+      "location": data?.['device']?.['carrier'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -782,7 +782,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "geo-country",
-      "location": data['request']?.['device']?.['geo']?.['country'] ?? '',
+      "location": data?.['device']?.['geo']?.['country'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -791,7 +791,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "geo-lat",
-      "location": data['request']?.['device']?.['geo']?.['lat'] ?? '',
+      "location": data?.['device']?.['geo']?.['lat'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -800,7 +800,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "geo-lon",
-      "location": data['request']?.['device']?.['geo']?.['lon'] ?? '',
+      "location": data?.['device']?.['geo']?.['lon'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -809,7 +809,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "geo-ipservice",
-      "location": data['request']?.['device']?.['geo']?.['ipservice'] ?? '',
+      "location": data?.['device']?.['geo']?.['ipservice'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -818,7 +818,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-type",
-      "location": data['request']?.['device']?.['geo']?.['type'] ?? '',
+      "location": data?.['device']?.['geo']?.['type'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -827,7 +827,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-accuracy",
-      "location": data['request']?.['device']?.['geo']?.['accuracy'] ?? '',
+      "location": data?.['device']?.['geo']?.['accuracy'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -836,7 +836,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-lastfix",
-      "location": data['request']?.['device']?.['geo']?.['lastfix'] ?? '',
+      "location": data?.['device']?.['geo']?.['lastfix'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -845,7 +845,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-region",
-      "location": data['request']?.['device']?.['geo']?.['region'] ?? '',
+      "location": data?.['device']?.['geo']?.['region'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -854,7 +854,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "geo-regionfips104",
-      "location": data['request']?.['device']?.['geo']?.['regionfips104'] ?? '',
+      "location": data?.['device']?.['geo']?.['regionfips104'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -863,7 +863,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-metro",
-      "location": data['request']?.['device']?.['geo']?.['metro'] ?? '',
+      "location": data?.['device']?.['geo']?.['metro'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -872,7 +872,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-city",
-      "location": data['request']?.['device']?.['geo']?.['city'] ?? '',
+      "location": data?.['device']?.['geo']?.['city'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -881,7 +881,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-zip",
-      "location": data['request']?.['device']?.['geo']?.['zip'] ?? '',
+      "location": data?.['device']?.['geo']?.['zip'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -890,7 +890,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "geo-utcoffset",
-      "location": data['request']?.['device']?.['geo']?.['utcoffset'] ?? '',
+      "location": data?.['device']?.['geo']?.['utcoffset'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -899,7 +899,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "geo-ext",
-      "location": data['request']?.['device']?.['geo']?.['ext'] ?? '',
+      "location": data?.['device']?.['geo']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -908,7 +908,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-mimes",
-      "location": data['request']?.['imp'][0]?.['video']?.['mimes'] ?? '',
+      "location": imp?.['video']?.['mimes'] ?? '',
       "RecommendedValue": ["video/mp4","application/x-mpegurl","video/3gpp","video/x-flv"]
     },
     {
@@ -917,7 +917,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "video-minduration",
-      "location": data['request']?.['imp'][0]?.['video']?.['minduration'] ?? '',
+      "location": imp?.['video']?.['minduration'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -926,7 +926,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-maxduration",
-      "location": data['request']?.['imp'][0]?.['video']?.['maxduration'] ?? '',
+      "location": imp?.['video']?.['maxduration'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -935,7 +935,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-protocol",
-      "location": data['request']?.['imp'][0]?.['video']?.['protocol'] ?? '',
+      "location": imp?.['video']?.['protocol'] ?? '',
       "RecommendedValue": [2,3,5,6]
     },
     {
@@ -944,7 +944,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-protocols",
-      "location": data['request']?.['imp'][0]?.['video']?.['protocols'] ?? '',
+      "location": imp?.['video']?.['protocols'] ?? '',
       "RecommendedValue": [2,3,5,6]
     },
     {
@@ -953,7 +953,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-w",
-      "location": data['request']?.['imp'][0]?.['video']?.['w'] ?? '',
+      "location": imp?.['video']?.['w'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -962,7 +962,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-h",
-      "location": data['request']?.['imp'][0]?.['video']?.['h'] ?? '',
+      "location": imp?.['video']?.['h'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -971,7 +971,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-startdelay",
-      "location": data['request']?.['imp'][0]?.['video']?.['startdelay'] ?? '',
+      "location": imp?.['video']?.['startdelay'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -980,7 +980,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-placement",
-      "location": data['request']?.['imp'][0]?.['video']?.['placement'] ?? '',
+      "location": imp?.['video']?.['placement'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -989,7 +989,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-linearity",
-      "location": data['request']?.['imp'][0]?.['video']?.['linearity'] ?? '',
+      "location": imp?.['video']?.['linearity'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -998,7 +998,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "video-skip",
-      "location": data['request']?.['imp'][0]?.['video']?.['skip'] ?? '',
+      "location": imp?.['video']?.['skip'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1007,7 +1007,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-skipmin",
-      "location": data['request']?.['imp'][0]?.['video']?.['skipmin'] ?? '',
+      "location": imp?.['video']?.['skipmin'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1016,7 +1016,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "video-skipafter",
-      "location": data['request']?.['imp'][0]?.['video']?.['skipafter'] ?? '',
+      "location": imp?.['video']?.['skipafter'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1025,7 +1025,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-sequence",
-      "location": data['request']?.['imp'][0]?.['video']?.['sequence'] ?? '',
+      "location": imp?.['video']?.['sequence'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1034,7 +1034,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-battr",
-      "location": data['request']?.['imp'][0]?.['video']?.['battr'] ?? '',
+      "location": imp?.['video']?.['battr'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1043,7 +1043,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-maxextended",
-      "location": data['request']?.['imp'][0]?.['video']?.['maxextended'] ?? '',
+      "location": imp?.['video']?.['maxextended'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1052,7 +1052,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-minbitrate",
-      "location": data['request']?.['imp'][0]?.['video']?.['minbitrate'] ?? '',
+      "location": imp?.['video']?.['minbitrate'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1061,7 +1061,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-maxbitrate",
-      "location": data['request']?.['imp'][0]?.['video']?.['maxbitrate'] ?? '',
+      "location": imp?.['video']?.['maxbitrate'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1070,7 +1070,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-boxingallowed",
-      "location": data['request']?.['imp'][0]?.['video']?.['boxingallowed'] ?? '',
+      "location": imp?.['video']?.['boxingallowed'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1079,7 +1079,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "video-playbackmethod",
-      "location": data['request']?.['imp'][0]?.['video']?.['playbackmethod'] ?? '',
+      "location": imp?.['video']?.['playbackmethod'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1088,7 +1088,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "video-playbackend",
-      "location": data['request']?.['imp'][0]?.['video']?.['playbackend'] ?? '',
+      "location": imp?.['video']?.['playbackend'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1097,7 +1097,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-delivery",
-      "location": data['request']?.['imp'][0]?.['video']?.['delivery'] ?? '',
+      "location": imp?.['video']?.['delivery'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1106,7 +1106,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-pos",
-      "location": data['request']?.['imp'][0]?.['video']?.['pos'] ?? '',
+      "location": imp?.['video']?.['pos'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1115,7 +1115,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-companionad",
-      "location": data['request']?.['imp'][0]?.['video']?.['companionad'] ?? '',
+      "location": imp?.['video']?.['companionad'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1124,7 +1124,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-api",
-      "location": data['request']?.['imp'][0]?.['video']?.['api'] ?? '',
+      "location": imp?.['video']?.['api'] ?? '',
       "RecommendedValue": [3,5,6,7]
     },
     {
@@ -1133,7 +1133,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-companiontype",
-      "location": data['request']?.['imp'][0]?.['video']?.['companiontype'] ?? '',
+      "location": imp?.['video']?.['companiontype'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1142,7 +1142,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "video-ext",
-      "location": data['request']?.['imp'][0]?.['video']?.['ext'] ?? '',
+      "location": imp?.['video']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1151,7 +1151,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "banner-format",
-      "location": data['request']?.['imp'][0]?.['banner']?.['format'] ?? '',
+      "location": imp?.['banner']?.['format'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1160,7 +1160,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "banner-w",
-      "location": data['request']?.['imp'][0]?.['banner']?.['w'] ?? '',
+      "location": imp?.['banner']?.['w'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1169,7 +1169,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "banner-h",
-      "location": data['request']?.['imp'][0]?.['banner']?.['h'] ?? '',
+      "location": imp?.['banner']?.['h'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1178,7 +1178,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "banner-btype",
-      "location": data['request']?.['imp'][0]?.['banner']?.['btype'] ?? '',
+      "location": imp?.['banner']?.['btype'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1187,7 +1187,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "banner-battr",
-      "location": data['request']?.['imp'][0]?.['banner']?.['battr'] ?? '',
+      "location": imp?.['banner']?.['battr'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1196,7 +1196,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "banner-pos",
-      "location": data['request']?.['imp'][0]?.['banner']?.['pos'] ?? '',
+      "location": imp?.['banner']?.['pos'] ?? '',
       "RecommendedValue": 7
     },
     {
@@ -1205,7 +1205,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "banner-mimes",
-      "location": data['request']?.['imp'][0]?.['banner']?.['mimes'] ?? '',
+      "location": imp?.['banner']?.['mimes'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1214,7 +1214,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "banner-topframe",
-      "location": data['request']?.['imp'][0]?.['banner']?.['topframe'] ?? '',
+      "location": imp?.['banner']?.['topframe'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1223,7 +1223,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "banner-expdir",
-      "location": data['request']?.['imp'][0]?.['banner']?.['expdir'] ?? '',
+      "location": imp?.['banner']?.['expdir'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1232,7 +1232,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "banner-api",
-      "location": data['request']?.['imp'][0]?.['banner']?.['api'] ?? '',
+      "location": imp?.['banner']?.['api'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1241,7 +1241,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "banner-ext",
-      "location": data['request']?.['imp'][0]?.['banner']?.['ext'] ?? '',
+      "location": imp?.['banner']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1250,7 +1250,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "banner-vcm",
-      "location": data['request']?.['imp'][0]?.['banner']?.['vcm'] ?? '',
+      "location": imp?.['banner']?.['vcm'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1259,7 +1259,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-request",
-      "location": data['request']?.['imp'][0]?.['native']?.['request'] ?? '',
+      "location": imp?.['native']?.['request'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1268,7 +1268,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-ver",
-      "location": data['request']?.['imp'][0]?.['native']?.['ver'] ?? '',
+      "location": imp?.['native']?.['ver'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1277,7 +1277,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "native-api",
-      "location": data['request']?.['imp'][0]?.['native']?.['api'] ?? '',
+      "location": imp?.['native']?.['api'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1286,7 +1286,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "native-battr",
-      "location": data['request']?.['imp'][0]?.['native']?.['battr'] ?? '',
+      "location": imp?.['native']?.['battr'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1295,7 +1295,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-ext",
-      "location": data['request']?.['imp'][0]?.['native']?.['ext'] ?? '',
+      "location": imp?.['native']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1304,7 +1304,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-privacy",
-      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['privacy'] ?? '') : '',
+      "location": imp?.['native']?.['request'] != undefined ? (JSON.parse(imp?.['native']?.['request'])?.['privacy'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1313,7 +1313,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-plcmttype",
-      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['plcmttype'] ?? '') : '',
+      "location": imp?.['native']?.['request'] != undefined ? (JSON.parse(imp?.['native']?.['request'])?.['plcmttype'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1322,7 +1322,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-eventtrackers",
-      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['eventtrackers'] ?? '') : '',
+      "location": imp?.['native']?.['request'] != undefined ? (JSON.parse(imp?.['native']?.['request'])?.['eventtrackers'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1331,7 +1331,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "native-context",
-      "location": data['request']?.['imp'][0]?.['native']?.['request'] != undefined ? (JSON.parse(data['request']?.['imp'][0]?.['native']?.['request'])?.['context'] ?? '') : '',
+      "location": imp?.['native']?.['request'] != undefined ? (JSON.parse(imp?.['native']?.['request'])?.['context'] ?? '') : '',
       "RecommendedValue": ""
     },
     {
@@ -1340,7 +1340,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-mimes",
-      "location": data['request']?.['imp'][0]?.['audio']?.['mimes'] ?? '',
+      "location": imp?.['audio']?.['mimes'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1349,7 +1349,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-minduration",
-      "location": data['request']?.['imp'][0]?.['audio']?.['minduration'] ?? '',
+      "location": imp?.['audio']?.['minduration'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1358,7 +1358,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-maxduration",
-      "location": data['request']?.['imp'][0]?.['audio']?.['maxduration'] ?? '',
+      "location": imp?.['audio']?.['maxduration'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1367,7 +1367,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-protocols",
-      "location": data['request']?.['imp'][0]?.['audio']?.['protocols'] ?? '',
+      "location": imp?.['audio']?.['protocols'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1376,7 +1376,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-startdelay",
-      "location": data['request']?.['imp'][0]?.['audio']?.['startdelay'] ?? '',
+      "location": imp?.['audio']?.['startdelay'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1385,7 +1385,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-sequence",
-      "location": data['request']?.['imp'][0]?.['audio']?.['sequence'] ?? '',
+      "location": imp?.['audio']?.['sequence'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1394,7 +1394,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-battr",
-      "location": data['request']?.['imp'][0]?.['audio']?.['battr'] ?? '',
+      "location": imp?.['audio']?.['battr'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1403,7 +1403,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-maxextended",
-      "location": data['request']?.['imp'][0]?.['audio']?.['maxextended'] ?? '',
+      "location": imp?.['audio']?.['maxextended'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1412,7 +1412,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-minbitrate",
-      "location": data['request']?.['imp'][0]?.['audio']?.['minbitrate'] ?? '',
+      "location": imp?.['audio']?.['minbitrate'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1421,7 +1421,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-maxbitrate",
-      "location": data['request']?.['imp'][0]?.['audio']?.['maxbitrate'] ?? '',
+      "location": imp?.['audio']?.['maxbitrate'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1430,7 +1430,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-delivery",
-      "location": data['request']?.['imp'][0]?.['audio']?.['delivery'] ?? '',
+      "location": imp?.['audio']?.['delivery'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1439,7 +1439,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-companionad",
-      "location": data['request']?.['imp'][0]?.['audio']?.['companionad'] ?? '',
+      "location": imp?.['audio']?.['companionad'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1448,7 +1448,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-api",
-      "location": data['request']?.['imp'][0]?.['audio']?.['api'] ?? '',
+      "location": imp?.['audio']?.['api'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1457,7 +1457,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-companiontype",
-      "location": data['request']?.['imp'][0]?.['audio']?.['companiontype'] ?? '',
+      "location": imp?.['audio']?.['companiontype'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1466,7 +1466,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-maxseq",
-      "location": data['request']?.['imp'][0]?.['audio']?.['maxseq'] ?? '',
+      "location": imp?.['audio']?.['maxseq'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1475,7 +1475,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-feed",
-      "location": data['request']?.['imp'][0]?.['audio']?.['feed'] ?? '',
+      "location": imp?.['audio']?.['feed'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1484,7 +1484,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-stitched",
-      "location": data['request']?.['imp'][0]?.['audio']?.['stitched'] ?? '',
+      "location": imp?.['audio']?.['stitched'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1493,7 +1493,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "audio-nvol",
-      "location": data['request']?.['imp'][0]?.['audio']?.['nvol'] ?? '',
+      "location": imp?.['audio']?.['nvol'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1502,7 +1502,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-ext",
-      "location": data['request']?.['imp'][0]?.['audio']?.['ext'] ?? '',
+      "location": imp?.['audio']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1511,7 +1511,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-poddur",
-      "location": data['request']?.['imp'][0]?.['audio']?.['poddur'] ?? '',
+      "location": imp?.['audio']?.['poddur'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1520,7 +1520,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-rqddurs",
-      "location": data['request']?.['imp'][0]?.['audio']?.['rqddurs'] ?? '',
+      "location": imp?.['audio']?.['rqddurs'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1529,7 +1529,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-podid",
-      "location": data['request']?.['imp'][0]?.['audio']?.['podid'] ?? '',
+      "location": imp?.['audio']?.['podid'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1538,7 +1538,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-podseq",
-      "location": data['request']?.['imp'][0]?.['audio']?.['podseq'] ?? '',
+      "location": imp?.['audio']?.['podseq'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1547,7 +1547,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-slotinpod",
-      "location": data['request']?.['imp'][0]?.['audio']?.['slotinpod'] ?? '',
+      "location": imp?.['audio']?.['slotinpod'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1556,7 +1556,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "audio-mincpmpersec",
-      "location": data['request']?.['imp'][0]?.['audio']?.['mincpmpersec'] ?? '',
+      "location": imp?.['audio']?.['mincpmpersec'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1565,7 +1565,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "user-id",
-      "location": data['request']?.['user']?.['id'] ?? '',
+      "location": data?.['user']?.['id'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1574,7 +1574,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "user-buyeruid",
-      "location": data['request']?.['user']?.['buyeruid'] ?? '',
+      "location": data?.['user']?.['buyeruid'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1583,7 +1583,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "user-yob",
-      "location": data['request']?.['user']?.['yob'] ?? '',
+      "location": data?.['user']?.['yob'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1592,7 +1592,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "user-gender",
-      "location": data['request']?.['user']?.['gender'] ?? '',
+      "location": data?.['user']?.['gender'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1601,7 +1601,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "user-consent",
-      "location": data['request']?.['user']?.['consent'] ?? '',
+      "location": data?.['user']?.['consent'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1610,7 +1610,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "user-keywords",
-      "location": data['request']?.['user']?.['keywords'] ?? '',
+      "location": data?.['user']?.['keywords'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1619,7 +1619,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "user-customdata",
-      "location": data['request']?.['user']?.['customdata'] ?? '',
+      "location": data?.['user']?.['customdata'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1628,7 +1628,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "user-geo",
-      "location": data['request']?.['user']?.['geo'] ?? '',
+      "location": data?.['user']?.['geo'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1637,7 +1637,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "user-data",
-      "location": data['request']?.['user']?.['data'] ?? '',
+      "location": data?.['user']?.['data'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1646,7 +1646,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "user-ext-eids",
-      "location": data['request']?.['user']?.['ext.eids'] ?? '',
+      "location": data?.['user']?.['ext.eids'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1655,7 +1655,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "source-fd",
-      "location": data['request']?.['source']?.['fd'] ?? '',
+      "location": data?.['source']?.['fd'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1664,7 +1664,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 0,
       "id": "source-tid",
-      "location": data['request']?.['source']?.['tid'] ?? '',
+      "location": data?.['source']?.['tid'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1673,7 +1673,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "source-pchain",
-      "location": data['request']?.['source']?.['pchain'] ?? '',
+      "location": data?.['source']?.['pchain'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1682,7 +1682,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "source-omidpn",
-      "location": data['request']?.['source']?.['ext']?.['omidpn'] ?? '',
+      "location": data?.['source']?.['ext']?.['omidpn'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1691,7 +1691,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "regs-gdpr",
-      "location": data['request']?.['regs']?.['ext']?.['gdpr'] ?? '',
+      "location": data?.['regs']?.['ext']?.['gdpr'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1700,7 +1700,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "regs-coppa",
-      "location": data['request']?.['regs']?.['coppa'] ?? '',
+      "location": data?.['regs']?.['coppa'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1709,7 +1709,7 @@ function getJason(data){
       "Required": 1,
       "Visibility": 1,
       "id": "regs-us_privacy",
-      "location": data['request']?.['regs']?.['ext']?.['us_privacy'] ?? '',
+      "location": data?.['regs']?.['ext']?.['us_privacy'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1718,7 +1718,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "regs-ext",
-      "location": data['request']?.['regs']?.['ext'] ?? '',
+      "location": data?.['regs']?.['ext'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1727,7 +1727,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-id",
-      "location": data['request']?.['site']?.['id'] ?? (data['request']?.['app']?.['id'] ?? ''),
+      "location": data?.['site']?.['id'] ?? (data?.['app']?.['id'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1736,7 +1736,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-artist",
-      "location": data['request']?.['site']?.['artist'] ?? (data['request']?.['app']?.['artist'] ?? ''),
+      "location": data?.['site']?.['artist'] ?? (data?.['app']?.['artist'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1745,7 +1745,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-album",
-      "location": data['request']?.['site']?.['album'] ?? (data['request']?.['app']?.['album'] ?? ''),
+      "location": data?.['site']?.['album'] ?? (data?.['app']?.['album'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1754,7 +1754,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-episode",
-      "location": data['request']?.['site']?.['episode'] ?? (data['request']?.['app']?.['episode'] ?? ''),
+      "location": data?.['site']?.['episode'] ?? (data?.['app']?.['episode'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1763,7 +1763,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-genre",
-      "location": data['request']?.['site']?.['genre'] ?? (data['request']?.['app']?.['genre'] ?? ''),
+      "location": data?.['site']?.['genre'] ?? (data?.['app']?.['genre'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1772,7 +1772,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-isrc",
-      "location": data['request']?.['site']?.['isrc'] ?? (data['request']?.['app']?.['isrc'] ?? ''),
+      "location": data?.['site']?.['isrc'] ?? (data?.['app']?.['isrc'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1781,7 +1781,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-producer",
-      "location": data['request']?.['site']?.['producer'] ?? (data['request']?.['app']?.['producer'] ?? ''),
+      "location": data?.['site']?.['producer'] ?? (data?.['app']?.['producer'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1790,7 +1790,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-url",
-      "location": data['request']?.['site']?.['url'] ?? (data['request']?.['app']?.['url'] ?? ''),
+      "location": data?.['site']?.['url'] ?? (data?.['app']?.['url'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1799,7 +1799,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-cat",
-      "location": data['request']?.['site']?.['cat'] ?? (data['request']?.['app']?.['cat'] ?? ''),
+      "location": data?.['site']?.['cat'] ?? (data?.['app']?.['cat'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1808,7 +1808,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-cattax",
-      "location": data['request']?.['site']?.['cattax'] ?? (data['request']?.['app']?.['cattax'] ?? ''),
+      "location": data?.['site']?.['cattax'] ?? (data?.['app']?.['cattax'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1817,7 +1817,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-context",
-      "location": data['request']?.['site']?.['context'] ?? (data['request']?.['app']?.['context'] ?? ''),
+      "location": data?.['site']?.['context'] ?? (data?.['app']?.['context'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1826,7 +1826,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-contentrating",
-      "location": data['request']?.['site']?.['contentrating'] ?? (data['request']?.['app']?.['contentrating'] ?? ''),
+      "location": data?.['site']?.['contentrating'] ?? (data?.['app']?.['contentrating'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1835,7 +1835,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-data",
-      "location": data['request']?.['site']?.['data'] ?? (data['request']?.['app']?.['data'] ?? ''),
+      "location": data?.['site']?.['data'] ?? (data?.['app']?.['data'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1844,7 +1844,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-embeddable",
-      "location": data['request']?.['site']?.['embeddable'] ?? (data['request']?.['app']?.['embeddable'] ?? ''),
+      "location": data?.['site']?.['embeddable'] ?? (data?.['app']?.['embeddable'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1853,7 +1853,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-keywords",
-      "location": data['request']?.['site']?.['keywords'] ?? (data['request']?.['app']?.['keywords'] ?? ''),
+      "location": data?.['site']?.['keywords'] ?? (data?.['app']?.['keywords'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1862,7 +1862,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-len",
-      "location": data['request']?.['site']?.['len'] ?? (data['request']?.['app']?.['len'] ?? ''),
+      "location": data?.['site']?.['len'] ?? (data?.['app']?.['len'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1871,7 +1871,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-language",
-      "location": data['request']?.['site']?.['language'] ?? (data['request']?.['app']?.['language'] ?? ''),
+      "location": data?.['site']?.['language'] ?? (data?.['app']?.['language'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1880,7 +1880,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-livestream",
-      "location": data['request']?.['site']?.['livestream'] ?? (data['request']?.['app']?.['livestream'] ?? ''),
+      "location": data?.['site']?.['livestream'] ?? (data?.['app']?.['livestream'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1889,7 +1889,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-prodq",
-      "location": data['request']?.['site']?.['prodq'] ?? (data['request']?.['app']?.['prodq'] ?? ''),
+      "location": data?.['site']?.['prodq'] ?? (data?.['app']?.['prodq'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1898,7 +1898,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-videoquality",
-      "location": data['request']?.['site']?.['videoquality'] ?? (data['request']?.['app']?.['videoquality'] ?? ''),
+      "location": data?.['site']?.['videoquality'] ?? (data?.['app']?.['videoquality'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1907,7 +1907,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-userrating",
-      "location": data['request']?.['site']?.['userrating'] ?? (data['request']?.['app']?.['userrating'] ?? ''),
+      "location": data?.['site']?.['userrating'] ?? (data?.['app']?.['userrating'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1916,7 +1916,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-qagmediarating",
-      "location": data['request']?.['site']?.['qagmediarating'] ?? (data['request']?.['app']?.['qagmediarating'] ?? ''),
+      "location": data?.['site']?.['qagmediarating'] ?? (data?.['app']?.['qagmediarating'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1925,7 +1925,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-sourcerelationship",
-      "location": data['request']?.['site']?.['sourcerelationship'] ?? (data['request']?.['app']?.['sourcerelationship'] ?? ''),
+      "location": data?.['site']?.['sourcerelationship'] ?? (data?.['app']?.['sourcerelationship'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1934,7 +1934,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-ext",
-      "location": data['request']?.['site']?.['ext'] ?? (data['request']?.['app']?.['ext'] ?? ''),
+      "location": data?.['site']?.['ext'] ?? (data?.['app']?.['ext'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1943,7 +1943,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-kwarray",
-      "location": data['request']?.['site']?.['kwarray'] ?? (data['request']?.['app']?.['kwarray'] ?? ''),
+      "location": data?.['site']?.['kwarray'] ?? (data?.['app']?.['kwarray'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1952,7 +1952,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-network",
-      "location": data['request']?.['site']?.['network'] ?? (data['request']?.['app']?.['network'] ?? ''),
+      "location": data?.['site']?.['network'] ?? (data?.['app']?.['network'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1961,7 +1961,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-channel",
-      "location": data['request']?.['site']?.['channel'] ?? (data['request']?.['app']?.['channel'] ?? ''),
+      "location": data?.['site']?.['channel'] ?? (data?.['app']?.['channel'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1970,7 +1970,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "content-langb",
-      "location": data['request']?.['site']?.['langb'] ?? (data['request']?.['app']?.['langb'] ?? ''),
+      "location": data?.['site']?.['langb'] ?? (data?.['app']?.['langb'] ?? ''),
       "RecommendedValue": ""
     },
     {
@@ -1979,7 +1979,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "BrandVersion-brand",
-      "location": data['request']?.['device']?.['sua']?.['UserAgent']?.['BrandVersion']?.['brand'] ?? '',
+      "location": data?.['device']?.['sua']?.['UserAgent']?.['BrandVersion']?.['brand'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1988,7 +1988,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "BrandVersion-version",
-      "location": data['request']?.['device']?.['sua']?.['UserAgent']?.['BrandVersion']?.['version'] ?? '',
+      "location": data?.['device']?.['sua']?.['UserAgent']?.['BrandVersion']?.['version'] ?? '',
       "RecommendedValue": ""
     },
     {
@@ -1997,7 +1997,7 @@ function getJason(data){
       "Required": 0,
       "Visibility": 1,
       "id": "BrandVersion-ext",
-      "location": data['request']?.['device']?.['sua']?.['UserAgent']?.['BrandVersion']?.['ext'] ?? '',
+      "location": data?.['device']?.['sua']?.['UserAgent']?.['BrandVersion']?.['ext'] ?? '',
       "RecommendedValue": ""
     }
   ];
