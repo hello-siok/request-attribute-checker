@@ -1,4 +1,9 @@
-# request-attribute-checker
+# request-attribute-checker Changelog
+
+## 15 Dec
+* added logic to reflect Pubmatic's requirement: 
+> when placement type = in-stream
+> need to specify: video playback method, player size 
 
 ## 22 Nov
 * added scenario to handle data["imp"]. previously can only read from data["request"]["imp"]

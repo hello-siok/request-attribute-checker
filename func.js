@@ -56,7 +56,25 @@ function displayResult(data) {
         var streamColor = ((instreamOrOutstream == "in-stream" && soundOn == "soundOn") || (instreamOrOutstream == "out-stream" && soundOn == "soundOff")) ? "success" : "danger";
 
         metaElement.innerHTML += `<span class="badge bg-${streamColor}">[Video] ${instreamOrOutstream}, ${soundOn}</span> `;
+
+        // PUBMATIC requirement: if video is in-stream, must come with parameters:
+        // * need video playback method
+        // * player size
+        if(instreamOrOutstream == "in-stream"){
+            var playBack = imp["video"]?.['playbackmethod'];
+            var playerSizeHeight = imp["video"]?.['h'];
+            var playerSizeWidth = imp["video"]?.['w'];
+
+            if(playBack == undefined || playerSizeHeight == undefined || playerSizeWidth == undefined){
+                metaElement.innerHTML += `<span class="badge bg-danger">[Video] In-stream video shall add: 
+                ${playBack == undefined ? "playbackmethod, ": ""}
+                ${playerSizeHeight == undefined ? "video.h, ": ""}
+                ${playerSizeWidth == undefined ? "video.w ": ""}</span> `;
+            }
+        }
     }
+
+
 
     /// schain
     var schainComplete = data?.["source"]?.["ext"]?.["schain"]?.["complete"] ?? "no schain";
