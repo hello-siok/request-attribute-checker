@@ -1646,7 +1646,7 @@ function getJason(data, imp){
       "Required": 1,
       "Visibility": 1,
       "id": "user-ext-eids",
-      "location": data?.['user']?.['ext.eids'] ?? '',
+      "location": data?.['user']?.['ext']?.['eids'] ?? '',
       "RecommendedValue": ""
     },
     {
