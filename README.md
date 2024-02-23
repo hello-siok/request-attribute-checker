@@ -2,7 +2,7 @@
 
 ## 23 Feb, 2024
 * fixed reading user.ext.eids 
-* added scenario to read user.ext.consent (besides user.ext.consent)
+* added scenario to read user.ext.consent (besides user.consent)
 * added gdpr 2-letter country codes
 
 ## 15 Dec, 2023
