@@ -1601,7 +1601,7 @@ function getJason(data, imp){
       "Required": 1,
       "Visibility": 1,
       "id": "user-consent",
-      "location": data?.['user']?.['consent'] ?? '',
+      "location": data?.['user']?.['consent'] ?? (data?.['user']?.['ext']?.['consent'] ?? ''),
       "RecommendedValue": ""
     },
     {

@@ -97,19 +97,19 @@ function displayResult(data) {
     }
 
     /// EU GDPR
-    var euCountry = ["AUT","BEL","BGR","HRV","CYP","CZE", "DNK","EST","FIN","FRA","DEU","GRC","HUN","IRL","ITA","LVA","LTU","LUX","MLT","NLD","POL","PRT","ROU","SVK","SVN","ESP","SWE","GBR"];
+    var euCountry = ["AUT","BEL","BGR","HRV","CYP","CZE", "DNK","EST","FIN","FRA","DEU","GRC","HUN","IRL","ITA","LVA","LTU","LUX","MLT","NLD","POL","PRT","ROU","SVK","SVN","ESP","SWE","GBR","AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","CH","GB"];
     if (euCountry.includes(country)){
         //2.6 - Regs.gdpr | 2.5 below - Regs.ext.gdpr
-        var gdprApplicable = data['request']?.['regs']?.['ext']?.['gdpr'] ?? (data['request']?.['regs']?.['gdpr'] ?? "");
+        var gdprApplicable = data?.['regs']?.['ext']?.['gdpr'] ?? (data?.['regs']?.['gdpr'] ?? "");
         // 2.6 - User.consent | 2.5 below - User.ext.consent
-        var gdprConsentString = data['request']?.['user']?.['ext']?.['consent'] ?? (data['request']?.['user']?.['consent'] ?? "");
+        var gdprConsentString = data?.['user']?.['ext']?.['consent'] ?? (data?.['user']?.['consent'] ?? "");
 
         metaElement.innerHTML += `<span class="badge text-bg-light">GDPR applicable = ${gdprApplicable}; GDPR consent string = ${gdprConsentString}</span> `;
     }
 
     //SKAN
     if (os == "iOS"){
-        var skanIdLen = data['request']?.['imp'][0]?.['ext']?.['skadn']?.["skadnetids"] ?? [];
+        var skanIdLen = data?.['imp'][0]?.['ext']?.['skadn']?.["skadnetids"] ?? [];
         skanIdLen = skanIdLen.length;
         var skColor = (skanIdLen > 0) ? "success" : "danger";
 

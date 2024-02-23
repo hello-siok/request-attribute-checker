@@ -73,7 +73,8 @@ thead th {
 }
 
 #meta-info {
-    height: 80px;
+    /*height: 80px;*/
+    height: 100%;
     
 }
 
