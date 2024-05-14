@@ -129,6 +129,9 @@ function displayResult(data) {
         attribute = row["attribute"];
         className = row["id"];
         required  = document.getElementsByClassName(className)[0].checked ? "Y":"N";
+        important = row["Important"];
+        //console.log(important);
+        console.log(important == true);
         value     = row["location"];
         presence  = (value === "") ? "N" : "Y";
         recommendedValue = row["RecommendedValue"];
@@ -149,11 +152,15 @@ function displayResult(data) {
 
 
         // get Color
-        if(presence == "N" && required == "Y"){
-            color = "table-danger";
-        } else if (presence == "N" && required == "N"){
+        if(presence == "N" && required == "Y" && !important){
             color = "table-warning";
-        }else{
+            console.log("warning!");
+        } else if (presence == "N" && required == "N"){
+            color = "table-info";
+        } else if (presence == "N" && required == "Y" && important){
+            color = "table-danger";
+            console.log("danger!");
+        } else{
             color = "table-success";
         }
 
@@ -166,7 +173,7 @@ function displayResult(data) {
 
         // add to table
         if((required == "Y" || presence == "Y") && (catStatus == format || catStatus == "General") && (parent != doNotAddCounterpart)){
-            table.innerHTML += `<tr class="${color}">
+            table.innerHTML += `<tr class="${color}" ${important == true ? "style=\"font-weight: bold;\"": ""}>
                 <td>${parent}</td>
                 <td>${attribute}</td>
                 <td>${required}</td>
