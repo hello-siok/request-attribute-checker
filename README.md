@@ -1,5 +1,8 @@
 # request-attribute-checker Changelog
 
+## 14 May, 2024
+* added important signals
+
 ## 23 Feb, 2024
 * fixed reading user.ext.eids 
 * added scenario to read user.ext.consent (besides user.consent)

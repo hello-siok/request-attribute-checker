@@ -1757,7 +1757,7 @@ function getJason(data, imp){
       "attribute": "sessionduration",
       "Required": 1,
       "Visibility": 1,
-      "Important": 0,
+      "Important": 1,
       "id": "user-sessionduration",
       "location": data?.['user']?.['ext']?.['sessionduration'] ?? '',
       "RecommendedValue": ""
