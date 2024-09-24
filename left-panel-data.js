@@ -1004,6 +1004,15 @@ function getJason(data, imp){
     },
     {
       "parent": "Video",
+      "attribute": "rwdd",
+      "Required": 0,
+      "Visibility": 1,
+      "Important": 0,
+      "id": "video-rwdd",
+      "location": (imp?.['video']?.['rwdd'] ?? imp?.['video']?.['ext']?.['rwdd']) ?? ''
+    },
+    {
+      "parent": "Video",
       "attribute": "mimes",
       "Required": 1,
       "Visibility": 1,

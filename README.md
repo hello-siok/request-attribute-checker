@@ -1,5 +1,8 @@
 # request-attribute-checker Changelog
 
+## 24 Sep, 2024
+* added rwdd signal reading from: imp.video.rwdd (oRTB 2.6) or imp.video.ext.rwdd (oRTB 2.5)
+
 ## 14 May, 2024
 * added important signals
 
